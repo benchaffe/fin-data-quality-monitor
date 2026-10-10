@@ -1,0 +1,14 @@
+requests
+tenacity
+pandas
+pyarrow
+duckdb
+dbt-core<2
+dbt-duckdb
+pydantic
+openai
+python-dotenv
+streamlit
+plotly
+boto3
+pytest
