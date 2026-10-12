@@ -1,0 +1,20 @@
+version: 2
+models:
+  - name: dim_company
+    columns:
+      - name: cik
+        tests: [not_null]
+  - name: fact_financials
+    columns:
+      - name: cik
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_company')
+              field: cik
+      - name: metric
+        tests:
+          - accepted_values:
+              values: [revenue, net_income, operating_income, total_assets, total_liabilities, shareholders_equity]
+      - name: value
+        tests: [not_null]

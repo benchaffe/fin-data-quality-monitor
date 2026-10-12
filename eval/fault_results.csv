@@ -1,0 +1,7 @@
+fault,detected,clean_score,faulty_score
+duplicate_rows,True,100.0,85.0
+drop_company_revenue,True,100.0,93.8
+unit_error_x1000,True,100.0,96.7
+stale_company,True,100.0,96.7
+schema_drift,True,100.0,96.3
+break_balance_sheet,True,100.0,96.3

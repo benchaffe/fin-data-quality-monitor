@@ -1,0 +1,11 @@
+name: fin_dq
+version: "1.0.0"
+config-version: 2
+profile: fin_dq
+model-paths: ["models"]
+models:
+  fin_dq:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
