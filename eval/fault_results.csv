@@ -1,7 +1,11 @@
 fault,detected,clean_score,faulty_score
-duplicate_rows,True,100.0,85.0
-drop_company_revenue,True,100.0,93.8
-unit_error_x1000,True,100.0,96.7
-stale_company,True,100.0,96.7
-schema_drift,True,100.0,96.3
-break_balance_sheet,True,100.0,96.3
+duplicate_rows,False,96.7,96.7
+drop_company_revenue,True,96.7,90.4
+unit_error_x1000,True,96.7,93.3
+stale_company,True,96.7,93.3
+schema_drift,True,96.7,92.9
+break_balance_sheet,True,96.7,92.9
+null_filed_date,True,96.7,90.4
+null_fiscal_year,True,96.7,90.4
+negative_assets,True,96.7,93.3
+future_period_end,True,96.7,86.3

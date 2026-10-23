@@ -31,6 +31,22 @@ FAULTS = {
         "expect": ["balance_sheet_equation"],
         "sql": ["UPDATE fact_financials SET value = value * 1.5 WHERE cik = '{cik}' AND metric = 'total_assets'"],
     },
+    "null_filed_date": {
+        "expect": ["missing_filed_date"],
+        "sql": ["UPDATE fact_financials SET filed_date = NULL WHERE random() < 0.03"],
+    },
+    "null_fiscal_year": {
+        "expect": ["missing_fiscal_year"],
+        "sql": ["UPDATE fact_financials SET fiscal_year = NULL WHERE random() < 0.03"],
+    },
+    "negative_assets": {
+        "expect": ["negative_assets"],
+        "sql": ["UPDATE fact_financials SET value = -value WHERE cik = '{cik}' AND metric = 'total_assets'"],
+    },
+    "future_period_end": {
+        "expect": ["period_end_in_future"],
+        "sql": ["UPDATE fact_financials SET period_end = current_date + INTERVAL 400 DAY WHERE metric = 'revenue' AND random() < 0.01"],
+    },
 }
 
 
